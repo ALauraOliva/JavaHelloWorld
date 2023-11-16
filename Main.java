@@ -63,9 +63,23 @@ class Main {
         System.out.println("Enter your second number ");
         double secondNumber = scanner.nextDouble();
 
-        if (operation.equals("sum")) {
+        // if (operation.equals("sum")) {
+        // System.out.printf("%f + %f = %f", firstNumber,
+        // secondNumber, firstNumber + secondNumber);
+        // }
+        // scanner.close();
+
+        // ? SWITCH CASES
+        switch (operation) {
+        case "sum":
             System.out.printf("%f + %f = %f", firstNumber,
                     secondNumber, firstNumber + secondNumber);
+
+            break;
+
+        default:
+            System.out.printf("%s is not a support operation",
+                    operation);
         }
         scanner.close();
     }
