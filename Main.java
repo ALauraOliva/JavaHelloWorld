@@ -94,14 +94,29 @@ class Main {
         // vowels[4] = 'u';
 
         // TODO Best way to copy an array, because of its reference
-        int copyOfVowels[] = Arrays.copyOf(vowels, vowels.length);
+        // int copyOfVowels[] = Arrays.copyOf(vowels, vowels.length);
 
-        Arrays.fill(vowels, 0);
-        // Arrays.sort(vowels, 1, 4);
-        System.out.println(Arrays.toString(copyOfVowels));
-        System.out.println(Arrays.toString(vowels));
+        // Arrays.fill(vowels, 0);
+        // // Arrays.sort(vowels, 1, 4);
+        // System.out.println(Arrays.toString(copyOfVowels));
+        // System.out.println(Arrays.toString(vowels));
         // System.out.println(Arrays.toString(vowels)); // representation of an array in
         // string
+        // ?LOOPS DO, WHILE
+        // int number = 5;
+        // int multiplier = 1;
 
+        // ! at least se ejecuta una vez
+        // do {
+        // System.out.printf("%d x %d = %d \n", number, multiplier,
+        // number * multiplier);
+        // multiplier++;
+        // } while (multiplier <= 10);
+
+        // while (multiplier <= 10) {
+        // System.out.printf("%d x %d = %d \n", number, multiplier,
+        // number * multiplier);
+        // multiplier++;
+        // }
     }
 }
