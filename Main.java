@@ -1,6 +1,9 @@
 
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
 
 class Main {
     public static void main(String[] args) {
@@ -118,5 +121,50 @@ class Main {
         // number * multiplier);
         // multiplier++;
         // }
+        // ?ARRAYLIST, soy como arays, dinamicos, que pueden crecer y demas
+        // ? int double, boolean, primitive types
+        // ? Integer, is a class
+        // ArrayList<Integer> numbers = new ArrayList<Integer>(); // ? es un objeto de
+        // la clases Integer
+        // numbers.add(2);
+        // numbers.add(5);
+        // numbers.add(3);
+        // numbers.add(34);
+        // // System.out.println(numbers.toString());
+        // // System.out.println(numbers.get(0));
+        // // System.out.println(numbers.remove(2));
+        // System.out.println(numbers.remove(Integer.valueOf(2)));
+        // numbers.set(2, 12); // change the value of an specific index
+        // numbers.sort(Comparator.naturalOrder());
+        // numbers.sort(Comparator.reverseOrder());
+        // // numbers.clear(); //to clear all elements of the arraylist
+        // System.out.println(numbers.size());
+        // System.out.println(numbers.isEmpty()); // false
+
+        // System.out.println(numbers.contains(Integer.valueOf(12)));
+        // numbers.forEach(number -> {
+        // numbers.set(numbers.indexOf(number), number * 2);
+        // });
+
+        // System.out.println(numbers);
+        // ?HASMAPS LIKE DICTIONARIES
+        HashMap<String, Integer> examScores = new HashMap<String, Integer>();
+
+        examScores.put("Math", 21);
+        examScores.put("Sociology", 85);
+        examScores.put("English", 95);
+        examScores.put("Computer programming", 100);
+
+        examScores.putIfAbsent("Math", 70);
+        examScores.replace("Math", 70);
+
+        System.out.println(examScores.get("Religion")); // null
+        System.out.println(examScores.getOrDefault("Religion", -1)); // -1
+        // examScores.clear(); // clear all elements
+        examScores.remove("Sociology");
+        System.out.println("Size: " + examScores.size());
+
+        System.out.println(examScores.get("English"));
+        System.out.println(examScores.toString());// OUTPUT {English=95, Computer programming=100, Sociology=85, Math=70}
     }
 }
