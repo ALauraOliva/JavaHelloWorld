@@ -1,6 +1,7 @@
 
 import java.util.Scanner;
 import java.util.Arrays;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -148,31 +149,65 @@ class Main {
 
         // System.out.println(numbers);
         // ?HASMAPS LIKE DICTIONARIES
-        HashMap<String, Integer> examScores = new HashMap<String, Integer>();
+        // HashMap<String, Integer> examScores = new HashMap<String, Integer>();
 
-        examScores.put("Math", 21);
-        examScores.put("Sociology", 85);
-        examScores.put("English", 95);
-        examScores.put("Computer programming", 100);
+        // examScores.put("Math", 21);
+        // examScores.put("Sociology", 85);
+        // examScores.put("English", 95);
+        // examScores.put("Computer programming", 100);
 
-        examScores.putIfAbsent("Math", 70);
-        examScores.replace("Math", 70);
+        // examScores.putIfAbsent("Math", 70);
+        // examScores.replace("Math", 70);
 
-        System.out.println(examScores.get("Religion")); // null
-        System.out.println(examScores.getOrDefault("Religion", -1)); // -1
-        // examScores.clear(); // clear all elements
-        examScores.remove("Sociology");
-        System.out.println("Size: " + examScores.size());
+        // System.out.println(examScores.get("Religion")); // null
+        // System.out.println(examScores.getOrDefault("Religion", -1)); // -1
+        // // examScores.clear(); // clear all elements
+        // examScores.remove("Sociology");
+        // System.out.println("Size: " + examScores.size());
 
-        System.out.println(examScores.get("English"));
-        System.out.println(examScores.containsKey("Math"));
-        System.out.println(examScores.isEmpty());
+        // System.out.println(examScores.get("English"));
+        // System.out.println(examScores.containsKey("Math"));
+        // System.out.println(examScores.isEmpty());
 
-        System.out.println(
-                examScores.containsValue(Integer.valueOf(100)));
-        examScores.forEach((subject, score) -> {
-            System.out.println(subject + " - " + score);
-        });
-        System.out.println(examScores.toString());// OUTPUT {English=95, Computer programming=100, Sociology=85, Math=70}
+        // System.out.println(
+        // examScores.containsValue(Integer.valueOf(100)));
+        // examScores.forEach((subject, score) -> {
+        // System.out.println(subject + " - " + score);
+        // });
+        // System.out.println(examScores.toString());// OUTPUT {English=95, Computer
+        // programming=100, Sociology=85, Math=70}
+
+        // ? Object Oriented Programming
+        User youngerUser = new User("Andrea Carolina", "2000-06-22");
+        User olderUser = new User("Manuel Antonio", "1996-08-29");
+        Book book = new Book("Carmilla", "Sheridan Le Fu");
+
+        // book.title = "Carmilla";
+        // book.autor = "Sheridan Le Fu";
+
+        // !we dont change the data this way
+        // youngerUser.name = "Andrea Carolina";
+        // youngerUser.birthday = LocalDate.parse("2000-06-22");
+
+        youngerUser.borrow(book);
+
+        // olderUser.name = "Manuel Antonio";
+        // olderUser.birthday = LocalDate.parse("1996-08-29");
+
+        System.out.printf(
+                "%s was born back %s and she is now %d years old.",
+                youngerUser.getName(),
+                youngerUser.getBirthday().toString(),
+                youngerUser.age());
+        System.out.println();
+        System.out.printf("%s has borrowed these books : %s",
+                youngerUser.getName(),
+                youngerUser.borrowedBooks().toString());
+        System.out.println();
+
+        System.out.printf(
+                "%s was born back %s and she is now %d years old.",
+                olderUser.getName(),
+                olderUser.getBirthday().toString(), olderUser.age());
     }
 }
