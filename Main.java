@@ -165,6 +165,14 @@ class Main {
         System.out.println("Size: " + examScores.size());
 
         System.out.println(examScores.get("English"));
+        System.out.println(examScores.containsKey("Math"));
+        System.out.println(examScores.isEmpty());
+
+        System.out.println(
+                examScores.containsValue(Integer.valueOf(100)));
+        examScores.forEach((subject, score) -> {
+            System.out.println(subject + " - " + score);
+        });
         System.out.println(examScores.toString());// OUTPUT {English=95, Computer programming=100, Sociology=85, Math=70}
     }
 }
